@@ -1,0 +1,44 @@
+<html>
+ <head>
+  <title>Truth Table Generator</title>
+  <script src="script.js"></script>
+ </head>
+ <body>
+	<p>This is a truth table generator. The first row are the columns's names.</p>
+	
+	<table id="table" border="1 px">
+	</table>
+
+	<p>Press this button after you specify how many variables you want to deal with.</p>
+	<input type="button" value="Generate Table" onClick="generateTable()">
+	<input type="number" id="initialVariables" name="Initial Variables" min="1">
+
+	<br>
+	<p>Press this button after choose you which columns you want to compute and the operator to use. (Using the "Not" operator negates the operand on the right and ignores the left operand.)</p>
+	<input type="number" id="operand1" name="Initial Variables">
+	<select id="operator">
+	  <option value="Implies">Implies</option>
+	  <option value="Not">Not</option>
+	  <option value="And">And</option>
+	  <option value="Or">Or</option>
+	  <option value="Xor">Xor</option>
+	  <option value="Bi-Implicates">Bi-Implicates</option>
+	</select>
+	<input type="number" id="operand2" name="Initial Variables">
+	<input type="button" value="Create Column" onClick="createColumn()">
+	<br>
+	<p>Press this button to remove the most recent column you created.</p>
+	<input type="button" value="Remove column" onClick="removeColumn()">
+	<br>
+	
+	<!--
+	<p>If you have two to four initial varibles, you can create a Karnaugh map given a column. Columns 1 and 2 are shown in the first row of the K-Map while columns 3 and 4 are shown in the first column.</p>
+	<input type="button" value="Create K-Map" onClick="generateKMap()">
+	<br>
+	<br>
+	<table id="kMap" border="1px">
+		
+	</table>
+	-->
+ </body>
+</html>
