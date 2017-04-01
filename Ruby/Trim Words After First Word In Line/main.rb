@@ -1,3 +1,6 @@
+Dictionary File from:
+#https://raw.githubusercontent.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt
+
 rawDictionary = File.open("UntrimmedDictionary.txt","r")
 refinedDictionary = File.open("Dictionary.txt","w")
 while (line = rawDictionary.gets)
