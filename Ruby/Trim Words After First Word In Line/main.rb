@@ -1,4 +1,4 @@
-Dictionary File from:
+#Dictionary File from:
 #https://raw.githubusercontent.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt
 
 rawDictionary = File.open("UntrimmedDictionary.txt","r")
