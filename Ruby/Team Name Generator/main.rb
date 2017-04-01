@@ -1,3 +1,6 @@
+#The Dictionary here was generated from using the "Trim Words After First Word In Line" program in the Ruby Folder.
+#The Dictionary used to deal generate the dictionary here is from: https://raw.githubusercontent.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt
+
 def findDictionary(arguments)
 	for x in 0 .. arguments.length-1
 		if(arguments[x] == "-d")
