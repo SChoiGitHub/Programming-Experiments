@@ -48,21 +48,37 @@ if(ARGV[0] == "-h")
 	puts "RWBY? I believe you meant Ruby. I programmed this in Ruby."
 elsif(ARGV.length > 0)
 	#varible initialization
+	
+	
+	
 	begin
 		nameList = findNameList(ARGV)
 		dictionaryFile = findDictionary(ARGV)
-		
 		
 		puts "Searching using the dictionary file: "
 		puts dictionaryFile
 		puts "Searching words using the following names: "
 		puts nameList
+		puts
 		
-		myFile = File.open(dictionaryFile)
-		lookingAt = ""
-		while lookingAt = myFile.read
-			puts lookingAt
+
+		
+		myFile = File.open(dictionaryFile,"r")
+		myFile.each_line do |lookingAt|
+			#every word in the file
+			#puts lookingAt #DEBUG
+			a = 0
+			lookingAt.each_char do |compareThis|
+				if(a == nameList.length)
+					puts lookingAt
+					break
+				elsif(compareThis.downcase == nameList[a][0].downcase)
+					a+=1
+				end
+			end
+			
 		end
+		myFile.close
 	rescue
 		puts "An error has occured."
 	end
