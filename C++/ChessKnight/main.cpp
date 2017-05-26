@@ -3,8 +3,9 @@
 void markAndMove(int r, int c, int** myBoard, int n){
 	if(0 <= r && r < 8 && 0 <= c && c < 8){
 		if(myBoard[r][c] > n || myBoard[r][c] == 0){
-			myBoard[r][c] = n;
+			myBoard[r][c] = n; //Mark where we are.
 			
+			//Now move to these spots as needed.
 			markAndMove(r+1,c+2,myBoard,n+1);
 			markAndMove(r+1,c-2,myBoard,n+1);
 			
