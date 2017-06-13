@@ -14,12 +14,12 @@ class Ball{
 		this.vy = 0;
 	}
 	fall(){
-		this.vx += Math.random()*4-2;
+		this.vx += 0;
 		this.vy += 1;
 		this.X += this.vx;
 		this.y += this.vy;
 		if(this.y >= height){
-			this.vy -= this.vy*2;
+			this.vy = -1*this.vy;
 		}	
 	}
 }
