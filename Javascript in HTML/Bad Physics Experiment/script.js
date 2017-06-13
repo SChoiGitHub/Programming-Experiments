@@ -3,8 +3,6 @@ var context = canvas.getContext("2d");
 var height = canvas.height;
 var width = canvas.width;
 
-
-
 setInterval(frame,25);
 
 class Ball{
@@ -17,10 +15,12 @@ class Ball{
 	}
 	fall(){
 		this.vx += Math.random()*4-2;
-		this.vy += Math.random()*4-2;
+		this.vy += 1;
 		this.X += this.vx;
 		this.y += this.vy;
-		
+		if(this.y >= height){
+			this.vy -= this.vy*2;
+		}	
 	}
 }
 var b = new Ball(600,588,5);
